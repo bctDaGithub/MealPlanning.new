@@ -66,7 +66,7 @@
                     <div class="dropdown custom-icon me-3">
                         <a href="#" class="bi bi-tv custom-icon" id="adminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
                         <ul class="dropdown-menu" aria-labelledby="adminDropdown">
-                            <li><a class="dropdown-item" href="managerUser.jsp">Manage Users</a></li>
+                            <li><a class="dropdown-item" href="main?action=managerAccount">Manage Users</a></li>
                             <li><a class="dropdown-item" href="main?action=ManageOrdersServlet">Manage Orders</a></li>
                             <li><a class="dropdown-item" href="main?action=ManageDishServlet">Manage Dishes</a></li>
                         </ul>
