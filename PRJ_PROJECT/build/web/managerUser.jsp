@@ -1,3 +1,5 @@
+<%@page import="dto.Account"%>
+<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
@@ -30,8 +32,7 @@
                             <div class="col-sm-4" style="text-align: center; margin-top: 20px; margin-bottom: 20px; padding-top: 20px">
                                 <h3 class="mb-0"><strong>Manage Account</strong></h3>
                             </div>
-                            <h5 style="color: red">${requestScope.error}</h5>
-                            <h5 style="color: green">${requestScope.successfully}</h5>
+
                             <div class="col-lg-2"></div>
                             <div class="col-lg-6" style="text-align: center; margin-top: 20px; margin-bottom: 20px; padding-top: 20px">
                                 <form action="managerAccount" method="post" style="display: flex; justify-content: center; align-items: center;">
@@ -40,6 +41,9 @@
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addAccountModal" style="margin-left: 10px;">Add</button>
                                 </form>
                             </div>
+                            <h5 style="color: red">${requestScope.error}</h5>
+                            <h5 style="color: green">${requestScope.success}</h5>
+                            <h5 style="color: green">${requestScope.mess}</h5>
                         </div>
                         <div class="card-body" style="padding: 0">
                             <div class="table-responsive">
@@ -56,25 +60,32 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <c:if test="${empty listUser}">
-                                            <tr>
-                                                <td colspan="7">No users found.</td>
-                                            </tr>
-                                        </c:if>
-                                        <c:forEach items="${requestScope.listUser}" var="u">
-                                            <tr>
-                                                <td>${u.fullName}</td>
-                                                <td>${u.userName}</td>
-                                                <td>${u.email}</td>
-                                                <td>${u.address}</td>
-                                                <td>${u.roleID}</td>
-                                                <td>${u.phone}</td>
-                                                <td>
-                                                    <a href="#">Edit</a> |
-                                                    <a href="#">Delete</a>
-                                                </td>
-                                            </tr>
-                                        </c:forEach>
+
+                                        <%                        List<Account> allAccount = (List<Account>) request.getAttribute("listUser");
+                                            if (allAccount != null) {
+                                                for (Account acc : allAccount) {
+                                        %>
+                                        <tr>
+                                            <td><%=acc.getFullName()%></td>
+                                            <td><%=acc.getUserName()%></td>
+                                            <td><%=acc.getEmail()%></td>
+                                            <td><%=acc.getAddress()%></td>
+                                            <td><%=acc.getRoleID()%></td>
+                                            <td><%=acc.getPhone()%></td>
+                                            <td>
+                                                <a href="deleteaccount?username=<%=acc.getUserName()%>" onclick="return confirmDeletion()">Delete</a>
+                                            </td>
+                                        </tr>
+                                        <%
+                                            }
+                                        } else {
+                                        %>
+                                        <tr>
+                                            <td colspan="7">No users found.</td>
+                                        </tr>
+                                        <%
+                                            }
+                                        %>
                                     </tbody>
                                 </table>
                             </div>
@@ -166,5 +177,11 @@
         <script src="js/slick.min.js"></script>
         <script src="js/custom.js"></script>
         <script src="js/addAccount.js"></script>
+        <script>
+                                                    function confirmDeletion() {
+                                                        return confirm("Are you sure you want to delete this account?");
+                                                    }
+        </script>
+
     </body>
 </html>
