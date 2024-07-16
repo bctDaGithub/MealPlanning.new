@@ -60,6 +60,10 @@
         <servlet-name>PlaceOrderServlet</servlet-name>
         <servlet-class>controllers.PlaceOrderServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ManageOrdersServlet</servlet-name>
+        <servlet-class>controllers.admin.ManageOrdersServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GetOrderDetailServlet</servlet-name>
         <url-pattern>/GetOrderDetailServlet</url-pattern>
@@ -115,6 +119,10 @@
     <servlet-mapping>
         <servlet-name>PlaceOrderServlet</servlet-name>
         <url-pattern>/PlaceOrderServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManageOrdersServlet</servlet-name>
+        <url-pattern>/ManageOrdersServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

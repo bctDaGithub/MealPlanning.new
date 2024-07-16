@@ -33,7 +33,7 @@
                     <a href="#" class="bi bi-tv custom-icon me-3 dropdown-toggle" id="adminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
                     <ul class="dropdown-menu" aria-labelledby="adminDropdown">
                         <li><a class="dropdown-item" href="managerUser.jsp">Manage Users</a></li>
-                        <li><a class="dropdown-item" href="otherFunction1.jsp">Other Function 1</a></li>
+                        <li><a class="dropdown-item" href="main?action=manage-orders">Manage Orders</a></li>
                         <li><a class="dropdown-item" href="otherFunction2.jsp">Other Function 2</a></li>
                     </ul>
                 </div>
@@ -67,7 +67,7 @@
                         <a href="#" class="bi bi-tv custom-icon" id="adminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
                         <ul class="dropdown-menu" aria-labelledby="adminDropdown">
                             <li><a class="dropdown-item" href="managerUser.jsp">Manage Users</a></li>
-                            <li><a class="dropdown-item" href="#">Other Function 1</a></li>
+                            <li><a class="dropdown-item" href="ManageOrdersServlet">Manage Orders</a></li>
                             <li><a class="dropdown-item" href="#">Other Function 2</a></li>
                         </ul>
                     </div>

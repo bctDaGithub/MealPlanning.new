@@ -56,6 +56,9 @@ public class MainController extends HttpServlet {
                 case "view-cart":
                     url = "view-cart";
                     break;
+                case "ManageOrdersServlet":
+                    url = "/ManageOrdersServlet";
+                    break;
                 default:
                     throw new AssertionError();
             }

@@ -67,7 +67,48 @@ public class OrdersDAO implements DAOInterface<Order> {
 
         return list;
     }
+    public ArrayList<Order> getAllOrders() {
+    ArrayList<Order> list = new ArrayList<>();
+    Connection cn = null;
+    try {
+        // Bước 1: Tạo kết nối
+        cn = DButil.makeConnection();
+        if (cn != null) {
+            // Bước 2: Viết query và thực thi query
+            String query = "SELECT * FROM Orders";
+            PreparedStatement pst = cn.prepareStatement(query);
+            ResultSet rs = pst.executeQuery();
 
+            // Bước 3: Duyệt qua kết quả và tạo đối tượng Order
+            while (rs.next()) {
+                int orderId = rs.getInt("orderId");
+                Date orderDate = rs.getDate("orderDate");
+                String orderStatus = rs.getString("status");
+                int total = rs.getInt("total");
+                int userId = rs.getInt("userId");
+
+                // Tạo đối tượng Order và thêm vào danh sách
+                Order order = new Order(orderId, orderDate, orderStatus, total, userId);
+                list.add(order);
+            }
+            rs.close();
+            pst.close();
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    } finally {
+        try {
+            if (cn != null) {
+                cn.close();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    return list;
+}
+  
     public int insertOrder(Order order) {
         Connection cn = null;
         int orderId = -1;
@@ -342,4 +383,8 @@ public class OrdersDAO implements DAOInterface<Order> {
 
     return detailId;
 }
+
+    public boolean deleteOrder(int orderId) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

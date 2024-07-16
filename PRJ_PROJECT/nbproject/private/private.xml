@@ -3,25 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/PRJ_PROJECT_MealPlaning/PRJ_PROJECT/src/java/controllers/HomeServlet.java</file>
-            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/PRJ_PROJECT_MealPlaning/PRJ_PROJECT/src/java/controllers/AddToCartServlet.java</file>
-            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/PRJ_PROJECT_MealPlaning/PRJ_PROJECT/web/navbar.jsp</file>
-            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/PRJ_PROJECT_MealPlaning/PRJ_PROJECT/src/java/controllers/MainController.java</file>
-            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/PRJ_PROJECT_MealPlaning/PRJ_PROJECT/web/product-detail.jsp</file>
-            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/PRJ_PROJECT_MealPlaning/PRJ_PROJECT/src/java/controllers/PlaceOrderServlet.java</file>
-            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/PRJ_PROJECT_MealPlaning/PRJ_PROJECT/src/java/dao/OrdersDAO.java</file>
-            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/PRJ_PROJECT_MealPlaning/PRJ_PROJECT/src/java/dto/Order.java</file>
-            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/PRJ_PROJECT_MealPlaning/PRJ_PROJECT/web/view-cart.jsp</file>
-            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/PRJ_PROJECT_MealPlaning/PRJ_PROJECT/web/order.jsp</file>
-            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/PRJ_PROJECT_MealPlaning/PRJ_PROJECT/web/sign-up.jsp</file>
-            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/PRJ_PROJECT_MealPlaning/PRJ_PROJECT/web/list-dishes.jsp</file>
-            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/PRJ_PROJECT_MealPlaning/PRJ_PROJECT/src/java/controllers/GetOrderDetailServlet.java</file>
-            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/PRJ_PROJECT_MealPlaning/PRJ_PROJECT/src/java/dao/CartDAO.java</file>
-            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/PRJ_PROJECT_MealPlaning/PRJ_PROJECT/src/java/dto/OrderDetails.java</file>
-            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/PRJ_PROJECT_MealPlaning/PRJ_PROJECT/web/footer.jsp</file>
-            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/PRJ_PROJECT_MealPlaning/PRJ_PROJECT/web/faq-duthua.jsp</file>
-            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/PRJ_PROJECT_MealPlaning/PRJ_PROJECT/src/java/controllers/ViewCartServlet.java</file>
-            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/PRJ_PROJECT_MealPlaning/PRJ_PROJECT/nbproject/build-impl.xml</file>
+            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/MealPlanning.new/PRJ_PROJECT/web/navbar.jsp</file>
+            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/MealPlanning.new/PRJ_PROJECT/src/java/dao/OrdersDAO.java</file>
+            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/MealPlanning.new/PRJ_PROJECT/web/managerUser.jsp</file>
+            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/MealPlanning.new/PRJ_PROJECT/src/java/controllers/ManageDishesServlet.java</file>
+            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/MealPlanning.new/PRJ_PROJECT/src/java/controllers/admin/ManageOrdersServlet.java</file>
+            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/MealPlanning.new/PRJ_PROJECT/web/manage-orders.jsp</file>
+            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/MealPlanning.new/PRJ_PROJECT/src/java/controllers/admin/DeleteAccountServlet.java</file>
+            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/MealPlanning.new/PRJ_PROJECT/src/java/controllers/ListDishesServlet.java</file>
+            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/MealPlanning.new/PRJ_PROJECT/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/MealPlanning.new/PRJ_PROJECT/web/list-dishes.jsp</file>
+            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/MealPlanning.new/PRJ_PROJECT/src/java/controllers/MainController.java</file>
+            <file>file:/C:/Users/Cong%20Tuong/Documents/GitHub/MealPlanning.new/PRJ_PROJECT/src/java/dto/Order.java</file>
         </group>
     </open-files>
 </project-private>
