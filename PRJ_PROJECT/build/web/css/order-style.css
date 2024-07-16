@@ -1,0 +1,115 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jul 16, 2024, 12:39:52 AM
+    Author     : Cong Tuong
+*/
+
+/* Body và các thiết lập chung */
+/* Body và các thiết lập chung */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin-top: 56px;
+}
+
+/* order-style.css */
+
+.info-title {
+    font-size: 1.5rem; /* Adjust the font size for info titles */
+    margin-bottom: 5px; /* Add some space below each title */
+}
+
+.quantity-input {
+    font-size: 1.2rem; /* Increase the font size of quantity input */
+}
+
+/* Phần chính của trang order */
+.order-main {
+    margin-bottom: 56px;
+}
+
+/* Phần nội dung chi tiết món ăn */
+.order-content {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Hình ảnh món ăn */
+.dish-image {
+    float: left;
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+/* Phần thông tin chi tiết món ăn */
+.dish-info {
+    overflow: hidden;
+}
+
+/* Định dạng đề mục và nội dung chi tiết */
+.dish-properties {
+    margin-top: 10px;
+}
+
+.dish-properties dt {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.dish-properties dd {
+    margin-bottom: 10px;
+}
+
+/* Form đặt hàng */
+.order-form {
+    margin-top: 20px;
+}
+
+/* Định dạng ô nhập và nút Order */
+.form-group {
+    margin-bottom: 10px;
+}
+
+#quantity {
+    width: 60px;
+    font-size: 1rem;
+}
+
+.btn-order {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+}
+
+.btn-order:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+
+.btn-order {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+}
+
+.btn-order:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+
