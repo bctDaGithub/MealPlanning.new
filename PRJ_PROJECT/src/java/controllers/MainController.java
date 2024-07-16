@@ -59,6 +59,9 @@ public class MainController extends HttpServlet {
                 case "ManageOrdersServlet":
                     url = "/ManageOrdersServlet";
                     break;
+                case "ManageDishServlet":
+                    url = "/ManageDishServlet";
+                    break;
                 default:
                     throw new AssertionError();
             }

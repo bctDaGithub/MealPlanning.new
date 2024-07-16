@@ -64,6 +64,10 @@
         <servlet-name>ManageOrdersServlet</servlet-name>
         <servlet-class>controllers.admin.ManageOrdersServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ManageDishServlet</servlet-name>
+        <servlet-class>controllers.admin.ManageDishServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GetOrderDetailServlet</servlet-name>
         <url-pattern>/GetOrderDetailServlet</url-pattern>
@@ -123,6 +127,10 @@
     <servlet-mapping>
         <servlet-name>ManageOrdersServlet</servlet-name>
         <url-pattern>/ManageOrdersServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManageDishServlet</servlet-name>
+        <url-pattern>/ManageDishServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

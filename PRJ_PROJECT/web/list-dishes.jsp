@@ -51,7 +51,7 @@
                     <div class="col-12 page-title">
                         <h1 style="color: rgb(247, 72, 20)">List of Foods</h1>
                     </div>
-                    <%                        List<Dishes> dishesList = (List<Dishes>) request.getAttribute("dishesList");
+                    <%  List<Dishes> dishesList = (List<Dishes>) request.getAttribute("dishesList");
                         if (dishesList != null) {
                             for (Dishes dish : dishesList) {
                     %>

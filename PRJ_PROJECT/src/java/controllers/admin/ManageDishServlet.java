@@ -3,10 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
-package controllers;
+package controllers.admin;
 
+import dao.DishDAO;
+import dto.Dishes;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Cong Tuong
  */
-public class ManageDishesServlet extends HttpServlet {
+public class ManageDishServlet extends HttpServlet {
    
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -30,15 +33,11 @@ public class ManageDishesServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ManageDishesServlet</title>");  
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ManageDishesServlet at " + request.getContextPath () + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+           DishDAO dishDAO = new DishDAO();
+        List<Dishes> dishesList = dishDAO.getAllDishes();
+        
+        request.setAttribute("dishesList", dishesList);
+        request.getRequestDispatcher("manage-dishes.jsp").forward(request, response);
         }
     } 
 

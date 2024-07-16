@@ -13,6 +13,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import mylib.DButil;
@@ -67,48 +68,49 @@ public class OrdersDAO implements DAOInterface<Order> {
 
         return list;
     }
-    public ArrayList<Order> getAllOrders() {
-    ArrayList<Order> list = new ArrayList<>();
+    public List<Order> getAllOrders() {
+    List<Order> list = new ArrayList<>();
     Connection cn = null;
-    try {
-        // Bước 1: Tạo kết nối
-        cn = DButil.makeConnection();
-        if (cn != null) {
-            // Bước 2: Viết query và thực thi query
-            String query = "SELECT * FROM Orders";
-            PreparedStatement pst = cn.prepareStatement(query);
-            ResultSet rs = pst.executeQuery();
+    PreparedStatement pst = null;
+    ResultSet rs = null;
 
-            // Bước 3: Duyệt qua kết quả và tạo đối tượng Order
+    try {
+        try {
+            cn = DButil.makeConnection();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(OrdersDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        if (cn != null) {
+            String query = "SELECT orderId, userId, orderDate, total, status FROM Orders";
+            pst = cn.prepareStatement(query);
+            rs = pst.executeQuery();
+
             while (rs.next()) {
                 int orderId = rs.getInt("orderId");
+                int customerId = rs.getInt("userId");
                 Date orderDate = rs.getDate("orderDate");
-                String orderStatus = rs.getString("status");
-                int total = rs.getInt("total");
-                int userId = rs.getInt("userId");
+                int totalAmount = rs.getInt("total");
+                String status = rs.getString("status");
 
-                // Tạo đối tượng Order và thêm vào danh sách
-                Order order = new Order(orderId, orderDate, orderStatus, total, userId);
+                Order order = new Order(orderId, orderDate, status, totalAmount, customerId);
                 list.add(order);
             }
-            rs.close();
-            pst.close();
         }
-    } catch (Exception e) {
+    } catch (SQLException e) {
         e.printStackTrace();
     } finally {
         try {
-            if (cn != null) {
-                cn.close();
-            }
-        } catch (Exception e) {
+            if (rs != null) rs.close();
+            if (pst != null) pst.close();
+            if (cn != null) cn.close();
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
     return list;
 }
-  
+   
     public int insertOrder(Order order) {
         Connection cn = null;
         int orderId = -1;
