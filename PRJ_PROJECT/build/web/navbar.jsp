@@ -73,7 +73,7 @@
                     </div>
                 <% } %>
                 <a href="<%= userPage %>" class="user bi-person custom-icon me-3"></a>
-                <a href="product-detail.jsp" class="bi-bag custom-icon"></a>
+                <a href="view-cart.jsp" class="bi-bag custom-icon"></a>
             </div>
         </div>
     </div>
