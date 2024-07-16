@@ -2,8 +2,19 @@
 <%@page import="javax.servlet.http.HttpSession"%>
 <%
     String userPage = "sign-in.jsp";
+    boolean isAdmin = false;
+
     if (session != null && session.getAttribute("account") != null) {
-        userPage = "profile.jsp"; // Nếu đã đăng nhập, chuyển đến trang profile
+        userPage = "profile.jsp";
+        Object account = session.getAttribute("account");
+        if (account != null) {
+            try {
+                int roleID = Integer.parseInt(account.getClass().getMethod("getRoleID").invoke(account).toString());
+                isAdmin = (roleID == 1);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 %>
 <nav class="navbar navbar-expand-lg">
@@ -17,7 +28,17 @@
         </a>
 
         <div class="d-lg-none">
-            <a href="<%= userPage%>" class="bi-person custom-icon me-3"></a>
+            <% if (isAdmin) { %>
+                <div class="dropdown">
+                    <a href="#" class="bi bi-tv custom-icon me-3 dropdown-toggle" id="adminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                    <ul class="dropdown-menu" aria-labelledby="adminDropdown">
+                        <li><a class="dropdown-item" href="managerUser.jsp">Manage Users</a></li>
+                        <li><a class="dropdown-item" href="otherFunction1.jsp">Other Function 1</a></li>
+                        <li><a class="dropdown-item" href="otherFunction2.jsp">Other Function 2</a></li>
+                    </ul>
+                </div>
+            <% } %>
+            <a href="<%= userPage %>" class="bi-person custom-icon me-3"></a>
             <a href="product-detail.jsp" class="bi-bag custom-icon"></a>
         </div>
 
@@ -41,8 +62,18 @@
             </ul>
 
             <div class="d-none d-lg-block">
-                <a href="<%= userPage%>" class="user bi-person custom-icon me-3"></a>
-                <a href="main?action=view-cart" class="bi-bag custom-icon"></a>
+                <% if (isAdmin) { %>
+                    <div class="dropdown custom-icon me-3">
+                        <a href="#" class="bi bi-tv custom-icon" id="adminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                        <ul class="dropdown-menu" aria-labelledby="adminDropdown">
+                            <li><a class="dropdown-item" href="managerUser.jsp">Manage Users</a></li>
+                            <li><a class="dropdown-item" href="#">Other Function 1</a></li>
+                            <li><a class="dropdown-item" href="#">Other Function 2</a></li>
+                        </ul>
+                    </div>
+                <% } %>
+                <a href="<%= userPage %>" class="user bi-person custom-icon me-3"></a>
+                <a href="product-detail.jsp" class="bi-bag custom-icon"></a>
             </div>
         </div>
     </div>
