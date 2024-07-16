@@ -28,11 +28,11 @@ public class ManagerAccountServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession();
-        User a = (User) session.getAttribute("account");
+        Account a = (Account) session.getAttribute("account");
         String userName = a.getUserName();
         UserDAO dao = new UserDAO();
 
-        List<User> list = dao.getAllUsers();
+        List<Account> list = dao.getAllUsers();
 
         request.setAttribute("listUser", list);
         request.getRequestDispatcher("dashboard/mngaccount.jsp").forward(request, response);
@@ -45,7 +45,7 @@ public class ManagerAccountServlet extends HttpServlet {
         String txtSearch = request.getParameter("valueSearch");
         UserDAO dao = new UserDAO();
 
-        List<User> list = dao.getUsersBySearchName(txtSearch);
+        List<Account> list = dao.getUsersBySearchName(txtSearch);
 
         request.setAttribute("listUser", list);
         request.setAttribute("searchValue", txtSearch);
