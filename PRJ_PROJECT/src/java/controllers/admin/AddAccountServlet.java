@@ -39,13 +39,13 @@ public class AddAccountServlet extends HttpServlet {
         if (isDuplicate) {
             message = "Username already exists!";
             request.setAttribute("error", message);
-            request.getRequestDispatcher("managerUser.jsp").forward(request, response);
+            request.getRequestDispatcher("managerAccount").forward(request, response);
         } else {
             Account user = new Account(userName, fullName, password, address, phone, email, birthDate, roleID);
             dao.insert(user);
             message = "Account added successfully!";
             request.setAttribute("success", message);
-            request.getRequestDispatcher("managerUser.jsp").forward(request, response);
+            request.getRequestDispatcher("managerAccount").forward(request, response);
         }
     }
 
