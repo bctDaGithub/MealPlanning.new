@@ -30,7 +30,7 @@ public class AddAccountServlet extends HttpServlet {
         String email = request.getParameter("email");
         String birthDate = request.getParameter("birthday");
         String roleParam = request.getParameter("roleId");
-        int roleID = (roleParam == null) ? 2 : 1; // Default to 2 if roleId is not checked
+        int roleID = (roleParam == null) ? 2 : 1; 
 
         UserDAO dao = new UserDAO();
         boolean isDuplicate = dao.checkUserNameDuplicate(userName);
