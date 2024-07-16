@@ -35,7 +35,7 @@ public class ManagerAccountServlet extends HttpServlet {
         List<Account> list = dao.getAllUsers();
 
         request.setAttribute("listUser", list);
-        request.getRequestDispatcher("dashboard/mngaccount.jsp").forward(request, response);
+        request.getRequestDispatcher("managerUser.jsp").forward(request, response);
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -49,6 +49,6 @@ public class ManagerAccountServlet extends HttpServlet {
 
         request.setAttribute("listUser", list);
         request.setAttribute("searchValue", txtSearch);
-        request.getRequestDispatcher("dashboard/mngaccount.jsp").forward(request, response);
+        request.getRequestDispatcher("managerUser.jsp").forward(request, response);
     }
 }
