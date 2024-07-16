@@ -70,7 +70,16 @@
                                             <td><%=acc.getUserName()%></td>
                                             <td><%=acc.getEmail()%></td>
                                             <td><%=acc.getAddress()%></td>
-                                            <td><%=acc.getRoleID()%></td>
+                                            <td>
+                                                <%
+                                                    int roleID = acc.getRoleID();
+                                                    if (roleID == 1) {
+                                                        out.print("Admin");
+                                                    } else {
+                                                        out.print("Customer");
+                                                    }
+                                                %>
+                                            </td>
                                             <td><%=acc.getPhone()%></td>
                                             <td>
                                                 <a href="deleteaccount?username=<%=acc.getUserName()%>" onclick="return confirmDeletion()">Delete</a>
