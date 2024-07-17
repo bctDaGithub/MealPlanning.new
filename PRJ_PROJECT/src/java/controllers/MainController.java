@@ -65,6 +65,9 @@ public class MainController extends HttpServlet {
                 case "ManageDishServlet":
                     url = "/ManageDishServlet";
                     break;
+                    case "managerAccount":
+                    url = "managerAccount";
+                    break;
                 default:
                     throw new AssertionError();
             }
