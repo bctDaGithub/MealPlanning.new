@@ -72,6 +72,14 @@
         <servlet-name>order-history</servlet-name>
         <servlet-class>controllers.OrderHistoryServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>view-order-details</servlet-name>
+        <servlet-class>controllers.ViewOrderDetailsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>manage-order-status</servlet-name>
+        <servlet-class>controllers.admin.ManageOrderStatusServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GetOrderDetailServlet</servlet-name>
         <url-pattern>/GetOrderDetailServlet</url-pattern>
@@ -139,6 +147,14 @@
     <servlet-mapping>
         <servlet-name>order-history</servlet-name>
         <url-pattern>/order-history</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>view-order-details</servlet-name>
+        <url-pattern>/view-order-details</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>manage-order-status</servlet-name>
+        <url-pattern>/manage-order-status</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

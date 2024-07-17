@@ -68,7 +68,7 @@
                                 <td>$<%=order.getTotal()%></td>
                                 <td><%=order.getStatus()%></td>
                                 <td>
-                                    <a href="view-order-details.jsp?orderId=<%=order.getOrderId()%>" class="btn btn-primary btn-sm">View Details</a>
+                                    <a href="main?action=view-order-details&orderId=<%=order.getOrderId()%>" class="btn btn-primary btn-sm">View Details</a>
                                 </td>
                             </tr>
                             <%

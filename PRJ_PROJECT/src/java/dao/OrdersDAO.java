@@ -418,4 +418,74 @@ public class OrdersDAO implements DAOInterface<Order> {
         }
         return orderList;
     }
+
+    public Order getOrderById(int orderId) {
+    Connection con = null;
+    PreparedStatement pst = null;
+    ResultSet rs = null;
+    Order order = null;
+
+    try {
+        try {
+            con = DButil.makeConnection(); // DButil là lớp để thiết lập kết nối CSDL
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(OrdersDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        if (con != null) {
+            String sql = "SELECT orderId, orderDate, status, total, userId FROM Orders WHERE orderId = ?";
+            pst = con.prepareStatement(sql);
+            pst.setInt(1, orderId);
+            rs = pst.executeQuery();
+
+            if (rs.next()) {
+                int orderID = rs.getInt("orderId");
+                Date orderDate = rs.getDate("orderDate");
+                String status = rs.getString("status");
+                int total = rs.getInt("total");
+                int userId = rs.getInt("userId");
+
+                // Tạo đối tượng Order từ kết quả truy vấn
+                order = new Order(orderID, orderDate, status, total, userId);
+            }
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    } finally {
+    }
+    return order;
+}
+
+    public boolean updateOrderStatus(int orderId, String status) throws ClassNotFoundException {
+    Connection conn = null;
+    PreparedStatement stmt = null;
+    boolean success = false;
+
+    try {
+        conn = DButil.makeConnection();
+        String sql = "UPDATE Orders SET status = ? WHERE orderId = ?";
+        stmt = conn.prepareStatement(sql);
+        stmt.setString(1, status);
+        stmt.setInt(2, orderId);
+
+        int rowsAffected = stmt.executeUpdate();
+        if (rowsAffected > 0) {
+            success = true;
+        }
+    } catch (SQLException ex) {
+        ex.printStackTrace(); // Handle or log the exception as needed
+    } finally {
+        try {
+            if (stmt != null) {
+                stmt.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace(); // Handle or log the exception as needed
+        }
+    }
+    return success;
+}
+    
 }

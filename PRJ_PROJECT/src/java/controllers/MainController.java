@@ -65,7 +65,10 @@ public class MainController extends HttpServlet {
                 case "ManageDishServlet":
                     url = "/ManageDishServlet";
                     break;
-                    case "managerAccount":
+                case "view-order-details":
+                    url = "view-order-details";
+                    break;
+                case "managerAccount":
                     url = "managerAccount";
                     break;
                 default:
