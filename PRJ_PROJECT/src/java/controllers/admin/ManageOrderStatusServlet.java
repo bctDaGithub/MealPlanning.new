@@ -133,7 +133,7 @@ public class ManageOrderStatusServlet extends HttpServlet {
                 boolean success = dao.updateOrderStatus(orderId, "Cancelled"); // Assume updateOrderStatus method is implemented
 
                 if (success) {
-                    response.sendRedirect("manage-orders.jsp");
+                    response.sendRedirect("main?action=ManageOrdersServlet");
                 } else {
                     response.sendRedirect("error.jsp");
                 }
@@ -154,7 +154,7 @@ public class ManageOrderStatusServlet extends HttpServlet {
                 boolean success = dao.updateOrderStatus(orderId, "Processing");
 
                 if (success) {
-                    response.sendRedirect("manage-orders.jsp");
+                    response.sendRedirect("main?action=ManageOrdersServlet");
                 } else {
                     response.sendRedirect("error.jsp");
                 }
@@ -175,7 +175,7 @@ public class ManageOrderStatusServlet extends HttpServlet {
                 boolean success = dao.updateOrderStatus(orderId, "Completed");
 
                 if (success) {
-                    response.sendRedirect("manage-orders.jsp");
+                    response.sendRedirect("main?action=ManageOrdersServlet");
                 } else {
                     response.sendRedirect("error.jsp");
                 }

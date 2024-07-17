@@ -80,6 +80,10 @@
         <servlet-name>manage-order-status</servlet-name>
         <servlet-class>controllers.admin.ManageOrderStatusServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>view-order-details-admin</servlet-name>
+        <servlet-class>controllers.ViewOrderDetailsAdminServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GetOrderDetailServlet</servlet-name>
         <url-pattern>/GetOrderDetailServlet</url-pattern>
@@ -155,6 +159,10 @@
     <servlet-mapping>
         <servlet-name>manage-order-status</servlet-name>
         <url-pattern>/manage-order-status</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>view-order-details-admin</servlet-name>
+        <url-pattern>/view-order-details-admin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

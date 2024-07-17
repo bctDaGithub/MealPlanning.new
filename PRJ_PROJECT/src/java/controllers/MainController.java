@@ -68,6 +68,9 @@ public class MainController extends HttpServlet {
                 case "view-order-details":
                     url = "view-order-details";
                     break;
+                case "view-order-details-admin":
+                    url = "view-order-details-admin";
+                    break;
                 case "managerAccount":
                     url = "managerAccount";
                     break;
