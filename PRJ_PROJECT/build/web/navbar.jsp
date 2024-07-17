@@ -57,6 +57,9 @@
                     <a class="nav-link" href="products.jsp">Your Meals</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="main?action=order-history">Your Orders</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="contact.jsp">Contact</a>
                 </li>
             </ul>

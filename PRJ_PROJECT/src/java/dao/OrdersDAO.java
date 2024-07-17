@@ -389,4 +389,33 @@ public class OrdersDAO implements DAOInterface<Order> {
     public boolean deleteOrder(int orderId) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+    public List<Order> getOrdersByUserName(String userName) {
+         List<Order> orderList = new ArrayList<>();
+        String sql = "SELECT o.orderId, o.orderDate, o.status, o.total, o.userId " +
+             "FROM Orders o " +
+             "INNER JOIN Users u ON o.userId = u.userId " +
+             "WHERE u.userName = ? " +
+             "ORDER BY o.orderDate DESC";
+
+        try (Connection conn = DButil.makeConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setString(1, userName);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                Order order = new Order();
+                order.setOrderId(rs.getInt("orderId"));
+                order.setOrderDate(rs.getTimestamp("orderDate"));
+                order.setStatus(rs.getString("status"));
+                order.setTotal(rs.getInt("total"));
+                order.setUserId(rs.getInt("userId"));
+                orderList.add(order);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return orderList;
+    }
 }
