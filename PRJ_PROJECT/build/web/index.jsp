@@ -45,9 +45,9 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 col-10">
-                                    <h1 class="slick-title">Cool Fashion</h1>
+                                    <h1 class="slick-title">Meal Planning</h1>
 
-                                    <p class="lead text-white mt-lg-3 mb-lg-5">Little fashion template comes with total 8 jsp pages provided by Tooplate website.</p>
+                                    <p class="lead text-white mt-lg-3 mb-lg-5">Conquer Meal Planning: Create Delicious and Nutritious Meals in No Time</p>
 
                                     <a href="about.jsp" class="btn custom-btn">Learn more about us</a>
                                 </div>
@@ -63,11 +63,11 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 col-10">
-                                    <h1 class="slick-title">New Design</h1>
+                                    <h1 class="slick-title">New Menu</h1>
 
-                                    <p class="lead text-white mt-lg-3 mb-lg-5">Please share this Little Fashion template to your friends. Thank you for supporting us.</p>
+                                    <p class="lead text-white mt-lg-3 mb-lg-5">Please share this MEAL PLANNING template to your friends. Thank you for supporting us.</p>
 
-                                    <a href="product.jsp" class="btn custom-btn">Explore products</a>
+                                    <a href="product.jsp" class="btn custom-btn">CHOOSE YOUR BESS MEAL PLANNING</a>
                                 </div>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                                 <div class="col-lg-6 col-10">
                                     <h1 class="slick-title">Talk to us</h1>
 
-                                    <p class="lead text-white mt-lg-3 mb-lg-5">Tooplate is one of the best jsp CSS template websites for everyone.</p>
+                                    <p class="lead text-white mt-lg-3 mb-lg-5">The Power of Meal Planning: Transform Your Eating Habits and Improve Your Health.</p>
 
                                     <a href="contact.jsp" class="btn custom-btn">Work with us</a>
                                 </div>
@@ -99,21 +99,13 @@
                     <div class="row">
 
                         <div class="col-12 text-center">
-                            <h2 class="mb-5">Get started with <span>Little</span> Fashion</h2>
+                            <h2 class="mb-5">Get started with <span>Meal</span> Planning</h2>
                         </div>
 
                         <div class="col-lg-2 col-12 mt-auto mb-auto">
                             <ul class="nav nav-pills mb-5 mx-auto justify-content-center align-items-center" id="pills-tab" role="tablist">
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Introduction</button>
-                                </li>
-
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-youtube-tab" data-bs-toggle="pill" data-bs-target="#pills-youtube" type="button" role="tab" aria-controls="pills-youtube" aria-selected="true">How we work?</button>
-                                </li>
-
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-skill-tab" data-bs-toggle="pill" data-bs-target="#pills-skill" type="button" role="tab" aria-controls="pills-skill" aria-selected="false">Capabilites</button>
                                 </li>
                             </ul>
                         </div>
@@ -124,16 +116,16 @@
 
                                     <div class="row">
                                         <div class="col-lg-7 col-12">
-                                            <img src="images/pim-chu-z6NZ76_UTDI-unsplash.jpeg" class="img-fluid" alt="">
+                                            <img src="images/slideshow/pexels-ella-olsson-572949-1640771.jpg" class="img-fluid" alt="">
                                         </div>
 
                                         <div class="col-lg-5 col-12">
                                             <div class="d-flex flex-column h-100 ms-lg-4 mt-lg-0 mt-5">
-                                                <h4 class="mb-3">Good <span>Design</span> <br>Ideas for <span>your</span> fashion</h4>
+                                                <h4 class="mb-3">MEAL <span>PLANNING</span> <br>Create <span>your</span> Delicious and Nutritious Meals</h4>
 
-                                                <p>Little Fashion templates comes with <a href="sign-in.jsp">sign in</a> / <a href="sign-up.jsp">sign up</a> pages, product listing / product detail, about, FAQs, and contact page.</p>
+                                                <p>Meal Planning comes with <a href="sign-in.jsp">sign in</a> / <a href="sign-up.jsp">sign up</a> pages, product listing / product detail, about, FAQs, and contact page.</p>
 
-                                                <p>Since this HTML template is based on Boostrap 5 CSS library, you can feel free to add more components as you need.</p>
+                                                <p>Meal Planning: Your Key to a Healthier and Happier Life.</p>
 
                                                 <div class="mt-2 mt-lg-auto">
                                                     <a href="about.jsp" class="custom-link mb-2">
@@ -159,9 +151,9 @@
                                             <div class="d-flex flex-column h-100 ms-lg-4 mt-lg-0 mt-5">
                                                 <h4 class="mb-3">Life at Studio</h4>
 
-                                                <p>Over three years in business, We’ve had the chance to work on a variety of projects, with companies</p>
+                                                <p>Meal planning is the process of planning your meals and snacks in advance for a specific period of time. This can be done for a day, a week, or even a month. By planning your meals, you can ensure that you are eating healthy and nutritious foods that will give you the energy you need to get through your day.</p>
 
-                                                <p>Custom work is branding, web design, UI/UX design</p>
+                                                
 
                                                 <div class="mt-2 mt-lg-auto">
                                                     <a href="contact.jsp" class="custom-link mb-2">
@@ -184,7 +176,7 @@
                                             <div class="d-flex flex-column h-100 ms-lg-4 mt-lg-0 mt-5">
                                                 <h4 class="mb-3">What can help you?</h4>
 
-                                                <p>Over three years in business, We’ve had the chance on projects</p>
+                                                
 
                                                 <div class="skill-thumb mt-3">
 
@@ -226,123 +218,9 @@
                 </div>
             </section>
 
-            <section class="front-product">
-                <div class="container-fluid p-0">
-                    <div class="row align-items-center">
+            
 
-                        <div class="col-lg-6 col-12">
-                            <img src="images/retail-shop-owner-mask-social-distancing-shopping.jpg" class="img-fluid" alt="">
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <div class="px-5 py-5 py-lg-0">
-
-                                <h2 class="mb-4"><span>Retail</span> shop owners</h2>
-
-                                <p class="lead mb-4">Credits go to Unsplash and FreePik websites for images used in this Little Fashion by Tooplate.</p>
-
-                                <a href="products.jsp" class="custom-link">
-                                    Explore Products
-                                    <i class="bi-arrow-right ms-2"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <section class="featured-product section-padding">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-12 text-center">
-                            <h2 class="mb-5">Featured Products</h2>
-                        </div>
-
-                        <div class="col-lg-4 col-12 mb-3">
-                            <div class="product-thumb">
-                                <a href="product-detail.jsp">
-                                    <img src="images/product/evan-mcdougall-qnh1odlqOmk-unsplash.jpeg" class="img-fluid product-image" alt="">
-                                </a>
-
-                                <div class="product-top d-flex">
-                                    <span class="product-alert me-auto">New Arrival</span>
-
-                                    <a href="#" class="bi-heart-fill product-icon"></a>
-                                </div>
-
-                                <div class="product-info d-flex">
-                                    <div>
-                                        <h5 class="product-title mb-0">
-                                            <a href="product-detail.jsp" class="product-title-link">Tree pot</a>
-                                        </h5>
-
-                                        <p class="product-p">Original package design from house</p>
-                                    </div>
-
-                                    <small class="product-price text-muted ms-auto mt-auto mb-5">$25</small>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-12 mb-3">
-                            <div class="product-thumb">
-                                <a href="product-detail.jsp">
-                                    <img src="images/product/jordan-nix-CkCUvwMXAac-unsplash.jpeg" class="img-fluid product-image" alt="">
-                                </a>
-
-                                <div class="product-top d-flex">
-                                    <span class="product-alert">Low Price</span>
-
-                                    <a href="#" class="bi-heart-fill product-icon ms-auto"></a>
-                                </div>
-
-                                <div class="product-info d-flex">
-                                    <div>
-                                        <h5 class="product-title mb-0">
-                                            <a href="product-detail.jsp" class="product-title-link">Fashion Set</a>
-                                        </h5>
-
-                                        <p class="product-p">Costume Package</p>
-                                    </div>
-
-                                    <small class="product-price text-muted ms-auto mt-auto mb-5">$35</small>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-12">
-                            <div class="product-thumb">
-                                <a href="product-detail.jsp">
-                                    <img src="images/product/nature-zen-3Dn1BZZv3m8-unsplash.jpeg" class="img-fluid product-image" alt="">
-                                </a>
-
-                                <div class="product-top d-flex">
-                                    <a href="#" class="bi-heart-fill product-icon ms-auto"></a>
-                                </div>
-
-                                <div class="product-info d-flex">
-                                    <div>
-                                        <h5 class="product-title mb-0">
-                                            <a href="product-detail.jsp" class="product-title-link">Juice Drinks</a>
-                                        </h5>
-
-                                        <p class="product-p">Nature made another world</p>
-                                    </div>
-
-                                    <small class="product-price text-muted ms-auto mt-auto mb-5">$45</small>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 text-center">
-                            <a href="products.jsp" class="view-all">View All Products</a>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
+            
 
         </main>
         <%@ include file="footer.jsp" %>
