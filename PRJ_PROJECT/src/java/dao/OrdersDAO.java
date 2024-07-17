@@ -487,5 +487,80 @@ public class OrdersDAO implements DAOInterface<Order> {
     }
     return success;
 }
+
+   public List<Order> getOrdersByUserIdAndStatus(String userId, String[] statuses) {
+    List<Order> orderList = new ArrayList<>();
+    Connection conn = null;
+    PreparedStatement stmt = null;
+    ResultSet rs = null;
+    
+    try {
+        conn = DButil.makeConnection(); // Assume getConnection() returns a valid database connection
+        
+        // Build the SQL query based on userId and statuses
+        StringBuilder sql = new StringBuilder("SELECT * FROM Orders WHERE 1=1");
+        
+        if (userId != null && !userId.isEmpty()) {
+            sql.append(" AND userId = ?");
+        }
+        
+        if (statuses != null && statuses.length > 0) {
+            sql.append(" AND status IN (");
+            for (int i = 0; i < statuses.length; i++) {
+                if (i > 0) {
+                    sql.append(",");
+                }
+                sql.append("?");
+            }
+            sql.append(")");
+        }
+        
+        stmt = conn.prepareStatement(sql.toString());
+        
+        int parameterIndex = 1;
+        
+        if (userId != null && !userId.isEmpty()) {
+            stmt.setString(parameterIndex++, userId);
+        }
+        
+        if (statuses != null && statuses.length > 0) {
+            for (String status : statuses) {
+                stmt.setString(parameterIndex++, status);
+            }
+        }
+        
+        rs = stmt.executeQuery();
+        
+        while (rs.next()) {
+            Order order = new Order();
+            order.setOrderId(rs.getInt("orderId"));
+            order.setUserId(rs.getInt("userId"));
+            order.setOrderDate(rs.getDate("orderDate"));
+            order.setTotal(rs.getInt("total"));
+            order.setStatus(rs.getString("status"));
+            // Set other attributes as needed
+            orderList.add(order);
+        }
+        
+    } catch (SQLException | ClassNotFoundException ex) {
+        // Handle exceptions appropriately
+        ex.printStackTrace();
+    } finally {
+        // Close connections, statements, and result sets
+        try {
+            if (stmt != null) {
+                stmt.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace(); // Handle or log the exception as needed
+        }
+    }
+    
+    return orderList;
+}
+
     
 }

@@ -84,6 +84,10 @@
         <servlet-name>view-order-details-admin</servlet-name>
         <servlet-class>controllers.ViewOrderDetailsAdminServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ManageSearchOrdersServlet</servlet-name>
+        <servlet-class>controllers.admin.ManageSearchOrdersServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GetOrderDetailServlet</servlet-name>
         <url-pattern>/GetOrderDetailServlet</url-pattern>
@@ -163,6 +167,10 @@
     <servlet-mapping>
         <servlet-name>view-order-details-admin</servlet-name>
         <url-pattern>/view-order-details-admin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManageSearchOrdersServlet</servlet-name>
+        <url-pattern>/ManageSearchOrdersServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
